@@ -28,6 +28,9 @@ public class NewGunSystem : MonoBehaviour
     public GameObject impactHole;
     public GameObject sparks;
     public Animator animator;
+    
+    public string nameOfGun;
+
     public bool allowButtonHold;
     public bool scopingInAllowed = true;
     private bool isReloading = false;
@@ -35,13 +38,14 @@ public class NewGunSystem : MonoBehaviour
 
 
     NewPlayerControls controls;
+    public NewWeaponPickup pickupScript;
 
 
     // Start is called before the first frame update
     void OnEnable()
     {
-        foreach(Transform part in transform) { if (part.gameObject.GetComponent<MeshCollider>()) { part.gameObject.GetComponent<MeshCollider>().enabled = false; } }
-
+        pickupScript.weaponInHand = this.gameObject;
+        gameObject.GetComponent<BoxCollider>().enabled = false;
         gameObject.GetComponent<Rigidbody>().useGravity = false;
         gameObject.transform.localPosition = Vector3.zero;
         gameObject.transform.localRotation = Quaternion.Euler(Vector3.zero);
@@ -60,7 +64,7 @@ public class NewGunSystem : MonoBehaviour
         gameObject.transform.localPosition = Vector3.zero;
         gameObject.transform.localRotation = Quaternion.Euler(Vector3.zero);
         this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-        UIScript.WeaponName = gameObject.tag;
+        UIScript.WeaponName = nameOfGun;
         CurrAmmo = MagSize;
         BacAmmo = BacAmmo - MagSize;
     }
@@ -68,11 +72,11 @@ public class NewGunSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.parent == null) { OnDrop(); }
-        UIScript.WeaponName = this.gameObject.tag;
+        if(transform.parent == null) { OnDisable(); }
         UIScript.CurrentAmmo = CurrAmmo.ToString();
         UIScript.BackupAmmo = BacAmmo.ToString();
-        if (CurrAmmo == 0) { UIScript.Warnings = "No Ammo";  }
+
+        if (CurrAmmo == 0) { UIScript.Warnings = "No Ammo"; }
         else if (CurrAmmo <= Mathf.RoundToInt(MagSize / 2)) { UIScript.Warnings = "Low Ammo"; }
         else { UIScript.Warnings = ""; }
         
@@ -80,21 +84,21 @@ public class NewGunSystem : MonoBehaviour
         if (isReloading == true) { return; }
         if (allowButtonHold != true)
         {
-            if (Mouse.current.leftButton.wasPressedThisFrame || Gamepad.current.rightTrigger.wasPressedThisFrame)
-            {
+           controls.Gameplay.FireSemi.performed += ctx => {
                 shoot();
-                shooting = true;
-            }
-            else { shooting = false; }
+                shooting = true;    
+            };
+            shooting = false;
         }
         else
         {
-            if (Mouse.current.leftButton.isPressed || Gamepad.current.rightTrigger.isPressed)
-            {
+
+             if (controls.Gameplay.Fire.ReadValue<float>() == 1){
                 shoot();
                 shooting = true;
             }
             else { shooting = false; }
+
         }
         controls.Gameplay.Reload.started += ctx => StartCoroutine(reload());
     }
@@ -138,8 +142,6 @@ public class NewGunSystem : MonoBehaviour
             }
             dartsShot = 0;
         }
-        
-        
     }
 
 
@@ -165,15 +167,11 @@ public class NewGunSystem : MonoBehaviour
         }
     }
 
-    public void OnDrop()
+    public void OnDisable()
     {
-        foreach (Transform part in transform) { if (part.gameObject.GetComponent<MeshCollider>()) { part.gameObject.GetComponent<MeshCollider>().enabled = true; } }
-        gameObject.GetComponent<Rigidbody>().useGravity = true;
-        gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         
         UIScript.WeaponName = "-";
         print("disabled");
         controls.Gameplay.Disable();
-        this.GetComponent<NewGunSystem>().enabled = false;
     }
 }

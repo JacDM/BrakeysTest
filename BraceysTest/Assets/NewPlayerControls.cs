@@ -64,6 +64,15 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""FireSemi"",
+                    ""type"": ""Button"",
+                    ""id"": ""958595b0-8606-412e-8d2d-0de1f008d133"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Movement"",
                     ""type"": ""PassThrough"",
                     ""id"": ""934411ee-9f39-4a40-8070-8119ccd397cf"",
@@ -136,6 +145,15 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""Drop"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""b2594ff5-b653-4db1-9239-6bf0e756c41e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Hold"",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Test"",
                     ""type"": ""Button"",
                     ""id"": ""9f6be950-0920-4525-b66d-3c884e306272"",
@@ -172,7 +190,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Desktop"",
                     ""action"": ""Fire"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -260,7 +278,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
                     ""processors"": ""ScaleVector2(x=0.1,y=0.1)"",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Desktop"",
                     ""action"": ""Rotation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -282,7 +300,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Desktop"",
                     ""action"": ""Reload"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -304,7 +322,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/tab"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Desktop"",
                     ""action"": ""SwitchSlots"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -326,7 +344,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/2"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Desktop"",
                     ""action"": ""Sprint"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -337,7 +355,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Desktop"",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -359,7 +377,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Desktop"",
                     ""action"": ""Options"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -392,7 +410,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Keyboard;KeyboardMouse"",
+                    ""groups"": ""Keyboard;Desktop"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -403,7 +421,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Keyboard;KeyboardMouse"",
+                    ""groups"": ""Keyboard;Desktop"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -414,7 +432,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Keyboard;KeyboardMouse"",
+                    ""groups"": ""Keyboard;Desktop"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -425,7 +443,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Keyboard;KeyboardMouse"",
+                    ""groups"": ""Keyboard;Desktop"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -447,7 +465,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Desktop"",
                     ""action"": ""Pickup"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -469,7 +487,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Desktop"",
                     ""action"": ""Melee"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -491,7 +509,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/g"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Desktop"",
                     ""action"": ""Grenades"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -513,7 +531,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/scroll"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Desktop"",
                     ""action"": ""Zoom"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -524,7 +542,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/t"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Desktop"",
                     ""action"": ""Test"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -535,7 +553,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/g"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""KeyboardMouse"",
+                    ""groups"": ""Desktop"",
                     ""action"": ""FlipGravity"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -548,6 +566,50 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""FlipGravity"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""18f93cd0-c9f0-4240-b96f-4c793885970b"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""FireSemi"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""acb81b3c-dcdc-4961-9d1b-b26757bcc861"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Desktop"",
+                    ""action"": ""FireSemi"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""17514492-fd3f-4781-9c18-6be9476a561f"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Drop"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a24d9668-e7dc-49af-8d6b-00e2170e6dd4"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Desktop"",
+                    ""action"": ""Drop"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1094,8 +1156,8 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
     ],
     ""controlSchemes"": [
         {
-            ""name"": ""KeyboardMouse"",
-            ""bindingGroup"": ""KeyboardMouse"",
+            ""name"": ""Desktop"",
+            ""bindingGroup"": ""Desktop"",
             ""devices"": [
                 {
                     ""devicePath"": ""<Keyboard>"",
@@ -1122,6 +1184,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
         m_Gameplay_Grenades = m_Gameplay.FindAction("Grenades", throwIfNotFound: true);
         m_Gameplay_Melee = m_Gameplay.FindAction("Melee", throwIfNotFound: true);
         m_Gameplay_Fire = m_Gameplay.FindAction("Fire", throwIfNotFound: true);
+        m_Gameplay_FireSemi = m_Gameplay.FindAction("FireSemi", throwIfNotFound: true);
         m_Gameplay_Movement = m_Gameplay.FindAction("Movement", throwIfNotFound: true);
         m_Gameplay_Rotation = m_Gameplay.FindAction("Rotation", throwIfNotFound: true);
         m_Gameplay_Reload = m_Gameplay.FindAction("Reload", throwIfNotFound: true);
@@ -1130,6 +1193,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
         m_Gameplay_Jump = m_Gameplay.FindAction("Jump", throwIfNotFound: true);
         m_Gameplay_Options = m_Gameplay.FindAction("Options", throwIfNotFound: true);
         m_Gameplay_Pickup = m_Gameplay.FindAction("Pickup", throwIfNotFound: true);
+        m_Gameplay_Drop = m_Gameplay.FindAction("Drop", throwIfNotFound: true);
         m_Gameplay_Test = m_Gameplay.FindAction("Test", throwIfNotFound: true);
         m_Gameplay_FlipGravity = m_Gameplay.FindAction("FlipGravity", throwIfNotFound: true);
         // UI
@@ -1207,6 +1271,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Grenades;
     private readonly InputAction m_Gameplay_Melee;
     private readonly InputAction m_Gameplay_Fire;
+    private readonly InputAction m_Gameplay_FireSemi;
     private readonly InputAction m_Gameplay_Movement;
     private readonly InputAction m_Gameplay_Rotation;
     private readonly InputAction m_Gameplay_Reload;
@@ -1215,6 +1280,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Jump;
     private readonly InputAction m_Gameplay_Options;
     private readonly InputAction m_Gameplay_Pickup;
+    private readonly InputAction m_Gameplay_Drop;
     private readonly InputAction m_Gameplay_Test;
     private readonly InputAction m_Gameplay_FlipGravity;
     public struct GameplayActions
@@ -1225,6 +1291,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Grenades => m_Wrapper.m_Gameplay_Grenades;
         public InputAction @Melee => m_Wrapper.m_Gameplay_Melee;
         public InputAction @Fire => m_Wrapper.m_Gameplay_Fire;
+        public InputAction @FireSemi => m_Wrapper.m_Gameplay_FireSemi;
         public InputAction @Movement => m_Wrapper.m_Gameplay_Movement;
         public InputAction @Rotation => m_Wrapper.m_Gameplay_Rotation;
         public InputAction @Reload => m_Wrapper.m_Gameplay_Reload;
@@ -1233,6 +1300,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_Gameplay_Jump;
         public InputAction @Options => m_Wrapper.m_Gameplay_Options;
         public InputAction @Pickup => m_Wrapper.m_Gameplay_Pickup;
+        public InputAction @Drop => m_Wrapper.m_Gameplay_Drop;
         public InputAction @Test => m_Wrapper.m_Gameplay_Test;
         public InputAction @FlipGravity => m_Wrapper.m_Gameplay_FlipGravity;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
@@ -1256,6 +1324,9 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                 @Fire.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnFire;
                 @Fire.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnFire;
                 @Fire.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnFire;
+                @FireSemi.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnFireSemi;
+                @FireSemi.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnFireSemi;
+                @FireSemi.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnFireSemi;
                 @Movement.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMovement;
                 @Movement.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMovement;
                 @Movement.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnMovement;
@@ -1280,6 +1351,9 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                 @Pickup.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPickup;
                 @Pickup.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPickup;
                 @Pickup.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPickup;
+                @Drop.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDrop;
+                @Drop.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDrop;
+                @Drop.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDrop;
                 @Test.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnTest;
                 @Test.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnTest;
                 @Test.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnTest;
@@ -1302,6 +1376,9 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                 @Fire.started += instance.OnFire;
                 @Fire.performed += instance.OnFire;
                 @Fire.canceled += instance.OnFire;
+                @FireSemi.started += instance.OnFireSemi;
+                @FireSemi.performed += instance.OnFireSemi;
+                @FireSemi.canceled += instance.OnFireSemi;
                 @Movement.started += instance.OnMovement;
                 @Movement.performed += instance.OnMovement;
                 @Movement.canceled += instance.OnMovement;
@@ -1326,6 +1403,9 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
                 @Pickup.started += instance.OnPickup;
                 @Pickup.performed += instance.OnPickup;
                 @Pickup.canceled += instance.OnPickup;
+                @Drop.started += instance.OnDrop;
+                @Drop.performed += instance.OnDrop;
+                @Drop.canceled += instance.OnDrop;
                 @Test.started += instance.OnTest;
                 @Test.performed += instance.OnTest;
                 @Test.canceled += instance.OnTest;
@@ -1441,13 +1521,13 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
-    private int m_KeyboardMouseSchemeIndex = -1;
-    public InputControlScheme KeyboardMouseScheme
+    private int m_DesktopSchemeIndex = -1;
+    public InputControlScheme DesktopScheme
     {
         get
         {
-            if (m_KeyboardMouseSchemeIndex == -1) m_KeyboardMouseSchemeIndex = asset.FindControlSchemeIndex("KeyboardMouse");
-            return asset.controlSchemes[m_KeyboardMouseSchemeIndex];
+            if (m_DesktopSchemeIndex == -1) m_DesktopSchemeIndex = asset.FindControlSchemeIndex("Desktop");
+            return asset.controlSchemes[m_DesktopSchemeIndex];
         }
     }
     private int m_GamepadSchemeIndex = -1;
@@ -1465,6 +1545,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
         void OnGrenades(InputAction.CallbackContext context);
         void OnMelee(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
+        void OnFireSemi(InputAction.CallbackContext context);
         void OnMovement(InputAction.CallbackContext context);
         void OnRotation(InputAction.CallbackContext context);
         void OnReload(InputAction.CallbackContext context);
@@ -1473,6 +1554,7 @@ public partial class @NewPlayerControls : IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnOptions(InputAction.CallbackContext context);
         void OnPickup(InputAction.CallbackContext context);
+        void OnDrop(InputAction.CallbackContext context);
         void OnTest(InputAction.CallbackContext context);
         void OnFlipGravity(InputAction.CallbackContext context);
     }

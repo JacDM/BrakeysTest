@@ -9,6 +9,8 @@ TagManager:
   - Sniper
   - Rifle
   - Pistol
+  - Fire
+  - canGrab
   layers:
   - Default
   - TransparentFX

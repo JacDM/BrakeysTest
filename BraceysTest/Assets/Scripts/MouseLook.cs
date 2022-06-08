@@ -23,6 +23,7 @@ public class MouseLook : MonoBehaviour
     void OnEnable()
     {
         controls.Gameplay.Enable();
+        transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
     }   
 
     void Update()

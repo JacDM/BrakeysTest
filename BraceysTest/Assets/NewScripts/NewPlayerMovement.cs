@@ -17,7 +17,7 @@ public class NewPlayerMovement : MonoBehaviour
 	public float gravity = -9.81f;
 	public float maxVelocityChange = 10.0f;
 	public float jumpHeight = 2.0f;
-	private float duration = 90f;
+	//private float duration = 90f;
 
 
 	public  bool flipped = false;

@@ -20,7 +20,6 @@ public class WeaponPicker : MonoBehaviour
     {
         hand = WeaponSwitching.hand;
         if(Keyboard.current.qKey.wasPressedThisFrame){Drop();}
-        int i = 0;
     }
 
     public void Pickup(Collision col)
@@ -56,7 +55,7 @@ public class WeaponPicker : MonoBehaviour
     void Drop()
     {
         print("hiyou");
-        hand.GetComponentInChildren<NewGunSystem>().OnDrop();
+        //hand.GetComponentInChildren<NewGunSystem>().OnDrop();
         int i = 0;
         foreach (Transform weap in currHand)
         {
