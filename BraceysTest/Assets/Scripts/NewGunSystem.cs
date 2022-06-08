@@ -16,6 +16,7 @@ public class NewGunSystem : MonoBehaviour
     public float camShakeMagnitude;
     public float camShakeFadeInTime;
     public float camShakeFadeOutTime;
+   // public float speed;
 
     public int MagSize = 7;
     public int BacAmmo = 14;
@@ -27,8 +28,11 @@ public class NewGunSystem : MonoBehaviour
     public ParticleSystem muzzle;
     public GameObject impactHole;
     public GameObject sparks;
+    [SerializeField]
+    private TrailRenderer BulletTrail;
     public Animator animator;
-    
+    public Transform barrel;
+
     public string nameOfGun;
 
     public bool allowButtonHold;
@@ -122,6 +126,10 @@ public class NewGunSystem : MonoBehaviour
                     RaycastHit hit;
                     if (Physics.Raycast(FPCamera.transform.position, direction, out hit, range))
                     {
+                        TrailRenderer trail = Instantiate(BulletTrail, barrel.position, Quaternion.identity);
+
+                        StartCoroutine(SpawnTrail(trail, hit));
+                        //Instantiate(bullet,barrel.position, Quaternion.identity).GetComponent<Rigidbody>().AddForce(Vector3.forward * speed);
                         Target target = hit.transform.GetComponent<Target>();
                         if (target != null)
                         {
@@ -145,6 +153,7 @@ public class NewGunSystem : MonoBehaviour
     }
 
 
+
     IEnumerator reload()
     {
         if (CurrAmmo != MagSize && BacAmmo != 0)
@@ -165,6 +174,23 @@ public class NewGunSystem : MonoBehaviour
             animator.SetBool("Reloading", false);
             isReloading = false;
         }
+    }
+
+     private IEnumerator SpawnTrail(TrailRenderer Trail, RaycastHit Hit)
+    {
+        float time = 0;
+        Vector3 startPosition = Trail.transform.position;
+
+        while (time < 1)
+        {
+            Trail.transform.position = Vector3.Lerp(startPosition, Hit.point, time);
+            time += Time.deltaTime / Trail.time;
+
+            yield return null;
+        }
+        Trail.transform.position = Hit.point;
+
+        Destroy(Trail.gameObject, Trail.time);
     }
 
     public void OnDisable()
