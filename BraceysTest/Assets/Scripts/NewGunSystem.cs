@@ -139,8 +139,8 @@ public class NewGunSystem : MonoBehaviour
                         {
                             hit.rigidbody.AddForce(-hit.normal *impactForce);
                         }
-                        GameObject impactGo = Instantiate(impactHole, hit.point, Quaternion.LookRotation(hit.normal));
-                        Destroy(impactGo, 5f);
+                        GameObject impactGo = Instantiate(impactHole, hit.point, Quaternion.LookRotation(hit.normal),hit.transform);
+                        //Destroy(impactGo, 5f);
                     }
                     CameraShaker.Instance.ShakeOnce(camShakeMagnitude, camShakeRoughness, camShakeFadeInTime, camShakeFadeOutTime);
                     //Graphics
