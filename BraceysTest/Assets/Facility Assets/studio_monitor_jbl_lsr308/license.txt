@@ -1,0 +1,11 @@
+Model Information:
+* title:	Studio Monitor JBL LSR308
+* source:	https://sketchfab.com/3d-models/studio-monitor-jbl-lsr308-7ad5a7d350884a258a7326dfee5fbf8a
+* author:	Maxim Lukyanov (https://sketchfab.com/Mad_Huron)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Studio Monitor JBL LSR308" (https://sketchfab.com/3d-models/studio-monitor-jbl-lsr308-7ad5a7d350884a258a7326dfee5fbf8a) by Maxim Lukyanov (https://sketchfab.com/Mad_Huron) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
