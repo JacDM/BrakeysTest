@@ -13,8 +13,7 @@ public class BulletHoleScript : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, maxDist))
         {
-            if (decalHitWall && hit.transform.tag == "Level Parts")
-                Instantiate(decalHitWall, hit.point + (hit.normal * floatInFrontOfWall), Quaternion.LookRotation(hit.normal));
+            Instantiate(decalHitWall, hit.point + (hit.normal * floatInFrontOfWall), Quaternion.LookRotation(hit.normal),hit.transform);
         }
     }
 }

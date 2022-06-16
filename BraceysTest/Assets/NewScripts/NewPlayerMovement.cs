@@ -35,10 +35,6 @@ public class NewPlayerMovement : MonoBehaviour
 		controls.Gameplay.FlipGravity.performed += ctx => flip();
 		rb.useGravity = false;
 	}
-    private void Update() 
-	{ 
-		if (Keyboard.current.xKey.wasPressedThisFrame) { flip(); }
-	}
 
     void FixedUpdate()
 	{
